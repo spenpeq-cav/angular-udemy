@@ -12,8 +12,8 @@ export class AppComponent {
   includeSymbols = false;
   password = '';
 
-  onChangeLength(e: any) {
-    const parsedValue = parseInt(e.target.value);
+  onChangeLength(eventTarget: EventTarget) {
+    const parsedValue = parseInt((eventTarget as HTMLInputElement).value);
     if (!isNaN(parsedValue)) {
       this.length = parsedValue;
     }
